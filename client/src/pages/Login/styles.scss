@@ -1,0 +1,107 @@
+@import "../../variables.scss";
+
+.login {
+  height: 100%;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+
+    &--left {
+      background-color: rgba(206, 226, 236, .3);
+    }
+
+    &--right {
+      background: linear-gradient(to bottom, rgb(228, 246, 247) 0%, rgb(253, 209, 199) 100%);
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 15px;
+    padding: 48px 40px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 72px -12px rgba(21, 53, 104, .12);
+    background-color: #fff;
+
+    > h2 {
+      text-align: center;
+      color: $color2;
+    }
+
+    > form {
+      margin-bottom: 20px;
+
+      > label {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color6;
+      }
+
+      > input {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid #cee2ec;
+        outline: none;
+        font-size: 14px;
+        color: $color5;
+
+        &:not([type=password]) {
+          margin-bottom: 36px;
+        }
+
+        &:focus {
+          border-color: $color4;
+        }
+      }
+
+      > span {
+        display: block;
+        margin: 4px 0 36px;
+        font-size: 11px;
+        font-weight: 500;
+        color: $color5;
+      }
+
+      > button {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 48px;
+        background-color: $color4;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 48px;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+
+    > button {
+      display: block;
+      margin: auto;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      text-decoration: underline;
+      cursor: pointer;
+      color: $color3;
+    }
+  }
+
+  @media (min-width: $md) {
+    &__column {
+      flex-basis: 50%;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = async (_, args, context) => await context.models.User.create(args);
